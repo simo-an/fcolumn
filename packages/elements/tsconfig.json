@@ -1,0 +1,22 @@
+{
+  "extends": "./../../tsconfig.base.json",
+  "include": [
+    "env.d.ts",
+    "rollup.config.ts",
+    "__tests__",
+    "scripts",
+    "src/**/*",
+  ],
+  "compilerOptions": {
+    "outDir": "dist/lib",
+    "declaration": false,
+    "declarationMap": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "../../node_modules/@types",
+    ]
+  }
+}

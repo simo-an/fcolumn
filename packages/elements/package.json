@@ -1,0 +1,39 @@
+{
+  "name": "@fcolumn/elements",
+  "version": "4.20.1",
+  "description": "elements module across fcolumn packages",
+  "main": "dist/fcolumn-elements.js",
+  "module": "dist/fcolumn-elements.esm.mjs",
+  "types": "dist/elements.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsx ./scripts/dev.ts",
+    "build": "rm -rf dist/* && pnpm run build-bundle && pnpm run build-type && pnpm run build-api",
+    "build-type": "tsc -p tsconfig.api.json",
+    "build-bundle": "rollup --config rollup.config.mjs",
+    "build-api": "tsx ./scripts/build-api.ts",
+    "lint": "eslint --ext .ts src/**/*.ts",
+    "format": "prettier --write --parser typescript src/**/*.ts"
+  },
+  "author": "June",
+  "keywords": [
+    "Four Column",
+    "elements",
+    "fcolumn/elements"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/simu/four-column",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simu/four-column.git"
+  },
+  "bugs": {
+    "url": "https://github.com/simu/four-column/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.42.3"
+  }
+}
