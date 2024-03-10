@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "strict": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "sourceMap": false,
+    "declaration": true,
+    "declarationMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "stripInternal": true,
+    "resolveJsonModule": true,
+    "verbatimModuleSyntax": false,
+    "useUnknownInCatchVariables": false,
+    "typeRoots": ["node_modules/@types"],
+    "types": ["node"],
+    "moduleResolution": "Node",
+    "paths": {
+      "@fcolumn/*": ["packages/*/src"],
+      // https://github.com/microsoft/TypeScript/issues/37991
+      "tslib": ["node_modules/tslib/tslib.d.ts"]
+    }
+  }
+}

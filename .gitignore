@@ -1,0 +1,17 @@
+node_modules
+explorations
+TODOs.md
+.nyc_output
+.DS_Store
+.idea
+.vscode
+.fleet
+.eslintcache
+*.log
+dist
+build
+temp
+docs
+docs_website
+junit
+stats.html

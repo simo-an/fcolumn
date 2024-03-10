@@ -1,0 +1,19 @@
+semi = true
+tabWidth = 2
+printWidth = 100
+trailingComma = "es5"
+endOfLine = "lf"
+
+useTabs = false
+singleQuote = false
+quoteProps = "as-needed"
+jsxSingleQuote = true
+bracketSpacing = true
+jsxBracketSameLine = true
+arrowParens = "always"
+requirePragma = false
+insertPragma = false
+proseWrap = "preserve"
+htmlWhitespaceSensitivity = "ignore"
+vueIndentScriptAndStyle = false
+embeddedLanguageFormatting = "auto"

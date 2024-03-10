@@ -1,0 +1,93 @@
+{
+  "name": "fcolumn",
+  "version": "0.0.1",
+  "description": "Four Column Project",
+  "type": "module",
+  "packageManager": "pnpm@8.6.2",
+  "private": true,
+  "scripts": {
+    "dev": "tsx ./scripts/dev.ts",
+    "start": "pnpm -r -F=./packages/* run dev",
+    "build": "pnpm -r -F=./packages/* run build",
+    "build-dev": "pnpm -r -F=./packages/* run build-dev",
+    "build-api": "pnpm -F=./packages/main run build-api",
+    "build-proj": "tsx scripts/build.ts",
+    "lint": "pnpm -F=./packages/* run lint",
+    "release": "tsx scripts/release.ts",
+    "release-dev": "tsx scripts/release.ts --dev",
+    "new": "tsx scripts/cli/new.ts",
+    "format": "pnpm -F=./packages/* run format",
+    "format-check": "prettier --check --cache .",
+    "preinstall": "only-allow pnpm",
+    "precommit": "pnpm -F=./packages/* run precommit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged --concurrent false"
+  },
+  "lint-staged": {
+    "packages/*/{src,__tests__}/**/*.ts": [
+      "eslint --fix --quiet",
+      "prettier --write"
+    ],
+    "plugins/*/{src,__tests__}/**/*.ts": [
+      "eslint --fix --quiet",
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=18.16.0",
+    "pnpm": ">=8.6.2"
+  },
+  "keywords": [
+    "Four Column"
+  ],
+  "author": "June",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@babel/parser": "^7.21.3",
+    "@babel/plugin-transform-class-properties": "^7.23.3",
+    "@babel/plugin-transform-private-methods": "^7.23.3",
+    "@babel/plugin-transform-private-property-in-object": "^7.23.3",
+    "@babel/plugin-transform-runtime": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-typescript": "^7.23.3",
+    "@babel/runtime-corejs3": "^7.24.0",
+    "@babel/types": "^7.24.0",
+    "@microsoft/api-extractor": "^7.36.0",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "@types/inquirer": "^9.0.3",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.16.0",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "@vitest/ui": "^1.3.1",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.20.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "inquirer": "^9.2.10",
+    "lint-staged": "^15.2.2",
+    "minimist": "^1.2.8",
+    "only-allow": "^1.1.1",
+    "prettier": "^3.2.5",
+    "rollup": "^4.12.1",
+    "rollup-plugin-license": "^3.2.0",
+    "rollup-plugin-typescript2": "0.36.0",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "simple-git-hooks": "^2.10.0",
+    "tslib": "^2.6.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3",
+    "vitest": "1.3.1",
+    "yaml": "^2.4.0"
+  }
+}
